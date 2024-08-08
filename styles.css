@@ -1,0 +1,81 @@
+#display{
+  width: 100%;
+  padding: 2vw;
+  font-size: 5vw;
+  text-align: left;
+  border: none;
+  color: white;
+  background-color: hsl(0,0%, 20%);
+}
+
+#calculator{
+  font-family: Arial, sans-serif;
+  background-color: hsl(0,0%, 15%);
+  border-radius: 2vw;
+  max-width: 90vw;
+  max-height: 90vh;
+  overflow: hidden;
+}
+
+body{
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: hsl(0, 0%, 95%);
+}
+
+#keys{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2vw;
+  padding: 2vw;
+}
+
+button{
+  width: 20vw;
+  height: 20vw;
+  max-width: 100px;  /* Ensures buttons don't get too large */
+  max-height: 100px; /* Ensures buttons don't get too large */
+  border-radius: 50%;
+  border: none;
+  background-color: hsl(0, 0%, 30%);
+  color: white;
+  font-size: 5vw;
+  font-weight: bold;
+  cursor: pointer;
+}
+button:hover{
+  background-color: hsl(0, 0%, 40%);
+}
+button:active{
+  background-color: hsl(0, 0%, 50%);
+}
+
+.operator-btn{
+  background-color: hsl(35, 100%, 55%);
+}
+.operator-btn:hover{
+  background-color: hsl(35, 100%, 65%);
+}
+.operator-btn:active{
+  background-color: hsl(35, 100%, 75%);
+}
+
+/* Media queries for smaller screens */
+@media (max-width: 600px) {
+  #display {
+    font-size: 8vw;
+  }
+
+  button {
+    width: 18vw;
+    height: 18vw;
+    font-size: 6vw;
+  }
+
+  #calculator {
+    max-width: 95vw;
+  }
+}
